@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
+<<<<<<< HEAD
   apiUrl: 'http://petshop-sp.ue.r.appspot.com/'
+=======
+  apiUrl: 'https://petshop-sp.ue.r.appspot.com/'
+>>>>>>> 85654045a400dd534dcabbda7a04c1540a4a8ac2
 };
 
 /*
