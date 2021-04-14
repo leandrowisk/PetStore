@@ -1,4 +1,3 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,14 +10,16 @@ import { MatSidenavModule, MatSidenavContainer,MatSidenav, MatSidenavContent } f
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
-
+import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
+import { Category } from './interfaces/category';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    CategoriesFeaturedComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +30,13 @@ import {HttpClientModule} from '@angular/common/http';
     MatSidenavModule,
     MatMenuModule,
     MatToolbarModule,
-    HttpClientTestingModule
+    HttpClientModule
     
   ],
+  exports:[
+  
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

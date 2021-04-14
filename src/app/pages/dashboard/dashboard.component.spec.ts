@@ -1,5 +1,7 @@
+import { CategoriesFeaturedComponent } from './../../components/categories-featured/categories-featured.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CategoriesServicesMock } from './../../mocks/categories-mocks';
+import { CategoriesService } from './../../services/categories.service';
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
@@ -8,7 +10,11 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ DashboardComponent,CategoriesFeaturedComponent],
+      providers:[{
+        provide: CategoriesService,
+        useClass:CategoriesServicesMock
+      }]
     })
     .compileComponents();
   });
