@@ -12,6 +12,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
 import { Category } from './interfaces/category';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -19,7 +22,8 @@ import { Category } from './interfaces/category';
   declarations: [
     AppComponent,
     DashboardComponent,
-    CategoriesFeaturedComponent
+    CategoriesFeaturedComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,8 @@ import { Category } from './interfaces/category';
     MatSidenavModule,
     MatMenuModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
     
   ],
   exports:[

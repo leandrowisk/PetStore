@@ -1,0 +1,36 @@
+
+ <mat-card >
+
+    <img src='{{product.images}}' width="80px" height="200px">
+    <mat-card-title>
+        {{product.name}}
+      </mat-card-title>
+
+      <mat-card-content>
+   
+        <mat-icon  class="material-icons-outlined"  *ngFor="let star of [1, 2, 3, 4, 5]" >
+                 
+          
+            <span  *ngIf="product.rating_stars>=star" >
+                
+                star
+             </span>
+
+             <span class="material-icons-outlined" *ngIf="star-product.rating_stars==0.5">
+                 star_half
+             </span>
+
+             
+             <span class="material-icons-outlined" *ngIf="star-product.rating_stars>0.5">
+                star_border
+            </span>
+       
+    </mat-icon>
+   
+   
+        <p class="preco-sem-desconto">{{product.value | currency:"BRL"}}</p>
+        <h1 class="preco-final"> {{product.promotional_value | currency: "BRL"}}</h1>
+        
+      </mat-card-content>
+   
+</mat-card>

@@ -18,6 +18,7 @@ export interface Product {
     subcategory: string;
     url: string;
     created_at: string;
+    status:string;
 }
 
 export interface ProductsGetResponse {

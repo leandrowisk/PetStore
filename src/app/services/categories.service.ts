@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { __core_private_testing_placeholder__ } from '@angular/core/testing';
