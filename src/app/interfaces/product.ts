@@ -6,7 +6,7 @@ export interface Product {
     value: number;
     promotional_value?: number;
     featured_image: string;
-    images: Array<String>;
+    images: Array<String> ;
     videos: Array<String>;
     rating_stars: number;
     rating_count: number;

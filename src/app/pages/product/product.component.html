@@ -1,0 +1,99 @@
+
+<div *ngIf="product">
+
+
+    <div class= "breadcrumb">
+        
+        
+        <span class="dashboard"  [routerLink]="['/']"> dashboard </span> >
+        <span>{{product.animal_type}} </span>>
+        <span> {{product.category}}</span>>
+        <span>{{product.subcategory}}</span>
+        
+        
+    </div>
+
+  
+<section class="container container-products">
+
+<div class="row">
+
+    <div class='container col-12 col-sm-12 col-md-3 col-lg-3'>
+
+         <swiper [config]="swiperConfig" class="swiper-container">
+            <div class="swiper-wrapper">
+
+            <ng-container *ngFor="let image of product.images" class="swiper-slide">
+                
+                <div class="swiper-slide">
+                    <img [src]="image" class="swiper-slide">
+                </div>
+                   
+                
+            </ng-container>
+        </div>
+       
+        <div class="swiper-pagination">
+            <div class = "swiper-button-next" ></div>  
+            <div class = "swiper-button-prev" ></div> 
+        </div>
+    </swiper>
+
+</div>
+<div class="container col-12 col-sm-12 col-md-5 col-lg-5">
+
+<h1 class="nome">{{product.name}}</h1>
+
+<mat-card-content>
+   
+    <div class='container-avaliation'>
+        <mat-icon  class="material-icons-outlined"  *ngFor="let star of [1, 2, 3, 4, 5]" >
+                 
+          
+            <span  *ngIf="product.rating_stars>=star" >
+                
+                star
+             </span>
+
+             <span class="material-icons-outlined" *ngIf="star-product.rating_stars==0.5">
+                 star_half
+             </span>
+
+             
+             <span class="material-icons-outlined" *ngIf="star-product.rating_stars>0.5">
+                star_border
+            </span>
+            
+    </mat-icon>
+    <p class="avaliation ">({{product.rating_count}})</p>
+</div>
+</mat-card-content>
+
+<div class="description">
+<p>{{product.description}}</p>
+</div>
+
+
+</div>
+
+<div class="container col-12 col-sm-12 col-md-4 col-lg-4">
+
+    <p class='desconto'><s>{{product.value | currency: 'BRL'}} </s></p>
+    
+    <h1 class='promotional-value'>{{product.promotional_value | currency: 'BRL'}} Para assinantes</h1>
+    
+    <h1 class='value'>{{product.value | currency: 'BRL'}}</h1>
+    <button class="add" >Adicionar ao carrinho</button>
+    <button class="assign">Assinar o produto </button>
+    
+    </div>
+
+
+
+
+
+</div>
+
+</section>
+
+</div>

@@ -4,6 +4,7 @@ import {  Observable } from 'rxjs';
 
 export class ProductsServiceMock{
 
+    product!: Product;
     getSpotlightProducts(): Observable<ProductsHighlights[]> {
         return new Observable<ProductsHighlights[]>(observer => {
     
@@ -28,4 +29,11 @@ export class ProductsServiceMock{
         observer.complete()    
         });
       }
+
+      getProduct(id: string): Observable<Product> {
+        return new Observable<Product>(observer => {
+          observer.next(this.product);
+          observer.complete();
+        });
+}
 }

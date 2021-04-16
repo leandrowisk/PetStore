@@ -1,3 +1,4 @@
+import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
 import { AnimalType } from './../../interfaces/product';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -5,6 +6,7 @@ import { Product } from 'src/app/interfaces/product';
 import { ProductItemComponent } from './product-item.component';
 import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
 import { MockComponent, MockComponents } from 'ng-mocks';
+import{RouterModule} from '@angular/router';
 
 
 
@@ -16,10 +18,11 @@ describe('ProductItemComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ProductItemComponent ,
+        MockComponent(RouterLink),
         MockComponent(MatIcon),
         MockComponent(MatCard),
         MockComponent(MatCardTitle),
-        MockComponent(MatCardContent)],
+        MockComponent(MatCardContent),],
     })
     .compileComponents();
   });

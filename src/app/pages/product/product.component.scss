@@ -1,0 +1,105 @@
+.swiper-container {
+    height: 270px;
+    max-width: 230px;
+    float:left;
+  
+.swiper-slide {
+
+    img {
+        max-width: 100%;
+        }
+    }
+}
+
+span{
+    color:yellow;
+}
+
+mat-card{
+    border-style: none;
+}
+
+.container-avaliation{
+    display: flex;
+   
+}
+.avaliation{
+    color:yellow;
+    display: inline;
+    margin-bottom: 8px;
+ 
+}
+button{
+    display: block;
+    margin-top: 5px;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    height: 3.2rem;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.buttons{
+    width: 400px;
+    float:right;
+}
+
+
+
+.add{
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+.assign{
+ background-color: rgb(214, 52, 106);
+ cursor: pointer;
+}
+
+.add:hover{
+    background-color: purple;
+    
+}
+
+.assign:hover{
+    background-color: rgb(204, 42, 96);
+}
+.value{
+    color: rebeccapurple;
+    font-size: 30px;
+   
+}
+.desconto{
+    margin: 0%;
+}
+
+.promotional-value{
+    color: rgb(214, 52, 106);
+    margin-bottom: 10px;
+    font-size: 30px;
+    
+
+}
+
+.container-products{
+
+     margin-top: 30px;
+}
+
+.breadcrumb{
+    margin: 10px;
+    font-size: 15px;
+}
+
+.breadcrumb span{
+    color:grey;
+    padding: 2px;
+}
+
+.dashboard{
+    cursor:pointer;
+    
+}
+
+
+

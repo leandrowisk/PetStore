@@ -14,7 +14,10 @@ import { CategoriesFeaturedComponent } from './components/categories-featured/ca
 import { Category } from './interfaces/category';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import {MatCardModule} from '@angular/material/card';
-
+import { ProductComponent } from './pages/product/product.component';
+import { NgxUsefulSwiperModule} from 'ngx-useful-swiper';
+import{BreadcrumbModule} from 'angular-crumbs';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -23,7 +26,8 @@ import {MatCardModule} from '@angular/material/card';
     AppComponent,
     DashboardComponent,
     CategoriesFeaturedComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,14 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatToolbarModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    NgxUsefulSwiperModule,
+    BreadcrumbModule,
+    RouterModule,
+  
+     
+  
+    
     
   ],
   exports:[

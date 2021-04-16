@@ -1,3 +1,4 @@
+import { RouterLink } from '@angular/router';
 import { ProductsHighlights } from './../interfaces/products-highlights';
 import { Observable } from 'rxjs';
 import { Category } from './../interfaces/category';
@@ -5,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Product} from '../interfaces/product';
+import {RouterModule} from '@angular/router';
 
 
 @Injectable({
@@ -36,5 +38,24 @@ export class ProductsService {
           }
         )
     });
+
+    
+  }
+
+  getProduct(id:string | null): Observable<Product>{
+
+    return new Observable<Product>(observer =>{
+
+      this.http.get<Product>(`${environment.apiUrl}v1/product/${id}`).subscribe(
+        product=>{ 
+        observer.next(product)
+        observer.complete();
+      },
+      error => {
+        observer.next(error);
+        observer.complete();
+      }
+      )
+    })
   }
 }
