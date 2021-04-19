@@ -1,3 +1,4 @@
+import { FooterComponent } from './../../components/footer/footer.component';
 import { ProductsService } from './../../services/products.service';
 import { ProductsServiceMock } from './../../mocks/product-mock';
 import { ProductItemComponent } from './../../components/product-item/product-item.component';
@@ -7,6 +8,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CategoriesServicesMock } from './../../mocks/categories-mocks';
 import { CategoriesService } from './../../services/categories.service';
 import { DashboardComponent } from './dashboard.component';
+import {RouterLink } from '@angular/router';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -15,8 +17,8 @@ describe('DashboardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ DashboardComponent,
-      MockComponent(CategoriesFeaturedComponent),
-      MockComponent(ProductItemComponent)],
+      MockComponents(CategoriesFeaturedComponent,ProductItemComponent,RouterLink),
+      ],
      
       providers:[{
         provide: ProductsService,

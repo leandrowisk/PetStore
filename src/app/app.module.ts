@@ -17,7 +17,9 @@ import {MatCardModule} from '@angular/material/card';
 import { ProductComponent } from './pages/product/product.component';
 import { NgxUsefulSwiperModule} from 'ngx-useful-swiper';
 import{BreadcrumbModule} from 'angular-crumbs';
-import {RouterModule} from '@angular/router';
+import { RouterModule, RouterLink } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
+import { ParametersService } from './services/parameters.service';
 
 
 
@@ -27,7 +29,9 @@ import {RouterModule} from '@angular/router';
     DashboardComponent,
     CategoriesFeaturedComponent,
     ProductItemComponent,
-    ProductComponent
+    ProductComponent,
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,7 @@ import {RouterModule} from '@angular/router';
   
   ],
 
-  providers: [],
+  providers: [ParametersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

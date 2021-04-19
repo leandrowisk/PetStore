@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -9,14 +11,15 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { MatMenuModule } from '@angular/material/menu';
+import { RouterLink } from '@angular/router';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
-        
-      ],
+     ],
       declarations: [
         
         MockComponents(
@@ -25,8 +28,10 @@ describe('AppComponent', () => {
         MatSidenav,
         MatSidenavContent,
         MatSidenavContainer,
-        MatIcon
-        
+        MatIcon,
+        FooterComponent,
+        RouterLink
+       
         )
       ],
       

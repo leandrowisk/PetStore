@@ -1,7 +1,7 @@
-import { RouterModule } from '@angular/router';
 import { Product } from './../../interfaces/product';
 import { Component, OnInit } from '@angular/core';
 import {Input} from '@angular/core';
+
 
 
 @Component({

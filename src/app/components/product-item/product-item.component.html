@@ -1,7 +1,7 @@
 
- <a [routerLink]="['/product', product.id]" routerLinkActive="active">
-    
-    <mat-card  >
+<div *ngIf="product">
+   <a [routerLink]="['/product',product.id]">
+    <mat-card>
      
     <img src='{{product.images}}' width="80px" height="200px">
     <mat-card-title>
@@ -37,4 +37,6 @@
    
 </mat-card>
 
-</a>
+  </a>
+
+</div>

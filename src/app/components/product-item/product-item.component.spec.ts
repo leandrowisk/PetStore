@@ -1,12 +1,12 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { RouterLink } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
 import { AnimalType } from './../../interfaces/product';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Product } from 'src/app/interfaces/product';
 import { ProductItemComponent } from './product-item.component';
 import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
-import { MockComponent, MockComponents } from 'ng-mocks';
-import{RouterModule} from '@angular/router';
+import { MockComponents } from 'ng-mocks';
+
 
 
 
@@ -17,12 +17,10 @@ describe('ProductItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[RouterTestingModule],
       declarations: [ ProductItemComponent ,
-        MockComponent(RouterLink),
-        MockComponent(MatIcon),
-        MockComponent(MatCard),
-        MockComponent(MatCardTitle),
-        MockComponent(MatCardContent),],
+        MockComponents(MatIcon,MatCard,MatCardTitle,MatCardContent),
+       ],
     })
     .compileComponents();
   });
@@ -60,8 +58,8 @@ describe('ProductItemComponent', () => {
     const html = fixture.nativeElement;
     const valor = html.querySelector('preco-sem-desconto');
     const descont=html.querySelector('preco-final')
-    expect(valor==115.49);
-    expect(descont==101.24);
+    expect(valor?.textContent?.toEqual(115.49));
+    expect(descont?.textContent?.toEqual(101.24));
 
   });
 

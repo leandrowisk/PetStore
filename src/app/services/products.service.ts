@@ -33,7 +33,7 @@ export class ProductsService {
           },
           () => { 
             
-            observer.error('error_on_get_categories');
+            observer.error('error_on_get_products');
             observer.complete();
           }
         )

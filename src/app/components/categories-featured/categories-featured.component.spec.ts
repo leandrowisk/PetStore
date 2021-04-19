@@ -1,3 +1,5 @@
+import { RouterLink } from '@angular/router';
+import { MockComponent } from 'ng-mocks';
 import { CategoriesServicesMock } from './../../mocks/categories-mocks';
 import { CategoriesService } from './../../services/categories.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -10,7 +12,8 @@ describe('CategoriesFeaturedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CategoriesFeaturedComponent ],
+      declarations: [ CategoriesFeaturedComponent ,
+      MockComponent(RouterLink)],
       providers:[{
         provide: CategoriesService,
         useClass:CategoriesServicesMock
