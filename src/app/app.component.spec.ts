@@ -21,9 +21,9 @@ describe('AppComponent', () => {
         RouterTestingModule
      ],
       declarations: [
-        
-        MockComponents(
         AppComponent,
+
+        MockComponents(
         MatToolbar,
         MatSidenav,
         MatSidenavContent,

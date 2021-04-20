@@ -5,16 +5,13 @@ mat-sidenav{
 mat-toolbar{
     height: 48px;
 }
-button{
 
-
+.menu-button{
+    margin-left: 85%;
     background-color: #3F51B5;
     color:white;
     border:none;
     cursor: pointer;
-}
-.menu-button{
-    margin-left: 85%;
     
 }
 
@@ -22,10 +19,26 @@ button{
 mat-sidenav-content {
     min-height: 100vh;
    
-    
 }
 
 .titulo{
    margin-left: 15px ;
    cursor: pointer;
 }
+
+.menu{
+  
+    display: grid;
+    align-items: center;
+}
+
+.menu-buttons{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.menu-buttons:hover{
+    color:white;
+    background-color:#3F51B5;
+}
+

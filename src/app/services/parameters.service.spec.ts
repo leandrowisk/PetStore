@@ -21,8 +21,8 @@ describe('ParametersService', () => {
 
   it('verify if method not throw a error', () => {
      
-    const metodo=service.getParameters();
-    expect(metodo).not.toThrow;
+    const metodo=service.getParameters;
+    expect(metodo).not.toThrow();
   
   });
 

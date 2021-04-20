@@ -11,7 +11,13 @@
         </button>
 
         </mat-toolbar>
-        <p>Menu ira ficar aqui</p>
+
+        
+
+        <div *ngFor="let menu of menus" class="container grid menu">
+            <button class="menu-buttons" mat-button (click)="showPage(menu.router, sidenav)">{{menu.name}}</button>
+        </div>
+        
     </mat-sidenav>
 
     <mat-sidenav-content >
@@ -30,7 +36,11 @@
 <router-outlet></router-outlet>
 <app-footer></app-footer>
     </mat-sidenav-content>
+
+    
 </mat-sidenav-container>
+
+
 
 
 

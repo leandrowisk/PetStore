@@ -42,7 +42,7 @@ describe('CategoriesFeaturedComponent', () => {
 it('should check category card item count in HTML', () => {
   const html = fixture.nativeElement;
   // Eu coloquei uma classe na div referente a cada item de categoria, por isso consegui obter pela classe
-  expect(html.getElementsByClassName('category-item').length==6);
+  expect(html.getElementsByClassName('category-item').length).toEqual(6);
 });
 
 it('should check what is the first categorie name', () => {

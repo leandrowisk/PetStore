@@ -23,5 +23,5 @@ export class DashboardComponent implements OnInit {
  
      this.productsService.getSpotlightProducts().subscribe(products => this.products=products);
   }
-
+  
 }
