@@ -33,14 +33,12 @@ img{
 @media screen and (max-width: 640px) {
 
     .social-medias a { 
-        display: block;
+       display: block;
+       align-items: center;
     }
 
-    .social-medias{
-       display: grid;
-        align-items: center;
-    }
-
+    
+    
 
        
 
