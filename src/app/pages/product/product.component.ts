@@ -14,7 +14,7 @@ import{RouterModule} from '@angular/router'
 })
 export class ProductComponent implements OnInit {
 
-  product!: Product;
+  product: Product;
   
   constructor(private productService: ProductsService, private route:ActivatedRoute) { }
 
@@ -37,5 +37,4 @@ export class ProductComponent implements OnInit {
   pagination: { el: '.swiper-pagination', clickable: true, } // Aqui definimos a paginação dele, no caso são as bolinhas que ficam na parte inferior do slide
   
     };
-
 }

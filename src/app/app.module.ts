@@ -1,3 +1,4 @@
+import { HttpTestingController } from '@angular/common/http/testing';
 import { FormsModule, FormGroup, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
@@ -26,6 +27,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ProductsComponent } from './pages/products/products.component';
 
 
 
@@ -38,6 +40,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ProductComponent,
     FooterComponent,
     ContactComponent,
+    ProductsComponent,
     
   ],
   imports: [

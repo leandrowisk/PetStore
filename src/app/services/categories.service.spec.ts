@@ -34,7 +34,7 @@ describe('CategoriesService', () => {
   
 
     
-    const req = httpTestingController.expectOne('http://petshop-sp.ue.r.appspot.com/v1/categories');
+    const req = httpTestingController.expectOne('https://petshop-sp.ue.r.appspot.com/v1/categories');
 
     
     expect(req.request.method).toEqual('GET');

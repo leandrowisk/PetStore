@@ -46,7 +46,9 @@ export class ContactComponent implements OnInit {
       
     }
     else
-      this.matSnackBar.open("Formulário inválido! Verifique os campos");
+      this.matSnackBar.open('Formulário inválido! Verifique os campos','Undo',{
+        duration: 5000
+      });
       
           
        

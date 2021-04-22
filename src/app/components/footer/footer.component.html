@@ -19,18 +19,22 @@
         {{parameters.address}} -{{parameters.address_complement}}
         <p>{{parameters.zip_code}} {{parameters.city}}-{{parameters.state}}</p>
     
+        <div class="telefones">
       <span class="material-icons">
         phone
         
         </span>
+       
+       
         {{parameters.phones[0].country_code}}
         {{parameters.phones[0].number}}
+     
        
       <img class="whatsapp" src="https://imobzi.storage.googleapis.com/image/redes-sociais/whatsapp_gray.svg">
         
         {{parameters.phones[1].country_code}}
         {{parameters.phones[1].number}}
-       
+        </div>
     </div>
 
 

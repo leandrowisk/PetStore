@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  apiUrl: 'http://petshop-sp.ue.r.appspot.com/'
+  apiUrl: 'https://petshop-sp.ue.r.appspot.com/'
 };
 
 /*

@@ -12,12 +12,12 @@ export interface Parameters {
         social_networks: Array<{
         account: string,
         name: string,
-            }>,
+            }>;
             phones: Array<{
                 number: string,
                 type: string,
                 country_code: string,
-            }>
+            }>;
      
 
        

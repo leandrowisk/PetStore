@@ -1,5 +1,6 @@
+import { HttpTestingController } from '@angular/common/http/testing';
 import { RouterLink } from '@angular/router';
-import { ProductsHighlights } from './../interfaces/products-highlights';
+import { ProductsHighlights, ProductsGetResponse } from './../interfaces/products-highlights';
 import { Observable } from 'rxjs';
 import { Category } from './../interfaces/category';
 import { environment } from 'src/environments/environment';
@@ -9,12 +10,15 @@ import {Product} from '../interfaces/product';
 import {RouterModule} from '@angular/router';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
+  httpTestingControler:HttpTestingController;
   
+
   constructor(private http: HttpClient) { }
  
   
@@ -58,4 +62,24 @@ export class ProductsService {
       )
     })
   }
+
+  getProducts(){
+    return new Observable<ProductsGetResponse>(observer =>{
+      this.http.get<ProductsGetResponse>(`${environment.apiUrl}v1/products`).subscribe(
+        products =>{
+          observer.next(products);
+          observer.complete();
+        },
+        error=>{
+          observer.next(error);
+          observer.complete();
+          
+        }
+      )
+   
+    });
+  }
+
+  
+
 }

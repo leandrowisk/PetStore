@@ -2,11 +2,11 @@
   <div class="col-12">
 
  <form class="contact-form" [formGroup]="formGroup">
-   <mat-card>
+   
    <h1 class="title">Contato</h1>
 
    <br>
-   <mat-form-field class="name" >
+   <mat-form-field class="name" appearance='fill' >
     <mat-label>Nome</mat-label>
         <input matInput type="text" formControlName="name">
         <mat-error *ngIf="formGroup.get('name').hasError('required')">O nome é obrigatório</mat-error>
@@ -17,7 +17,7 @@
 
       <br>
 
-      <mat-form-field class="email" >
+      <mat-form-field class="email" appearance='fill' >
         <mat-label>Email</mat-label>
             <input matInput type="text" formControlName="email">
                <mat-error  *ngIf="formGroup.get('email').hasError('required')">O email é obrigatório</mat-error>
@@ -25,14 +25,14 @@
      </mat-form-field>
 
      <br>
-     <mat-form-field class="phone">
+     <mat-form-field class="phone" appearance='fill'>
       <mat-label>Telefone</mat-label>
           <input matInput type="text"  formControlName="phone">
           <mat-error class="phone-error" *ngIf="formGroup.get('phone').hasError('required')">O telefone é obrigatório</mat-error>
-          <mat-error class="phone-error" *ngIf="formGroup.get('phone').hasError('pattern')">Insira um telefone válido no formato (ddi)(ddd)tel</mat-error>
+          <mat-error class="phone-error" *ngIf="formGroup.get('phone').hasError('pattern')">Insira um telefone válido no formato ddi(ddd)Tel</mat-error>
        </mat-form-field>
 <br>
-       <mat-form-field class="message">
+       <mat-form-field class="message" appearance='fill'>
         <mat-label>Mensagem</mat-label>
         <textarea  matInput formControlName="message"> </textarea>
             <mat-error *ngIf="formGroup.get('message').hasError('required')">A mensagem é obrigatória</mat-error>
@@ -40,7 +40,7 @@
          </mat-form-field>
 
          <button type="button" mat-button class="btn-enviar" (click)="sendForm()">Enviar</button>
-    </mat-card>
+   
     </form>
 
 

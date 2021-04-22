@@ -101,7 +101,7 @@ describe('ContactComponent', () => {
     fixture.autoDetectChanges();
     inputPhone=document.getElementsByClassName('phone')
     matError=inputPhone[0].getElementsByTagName('mat-error')
-    expect(matError[0].textContent.trim()).toEqual('Insira um telefone válido no formato (ddi)(ddd)tel');
+    expect(matError[0].textContent.trim()).toEqual('Insira um telefone válido no formato ddi(ddd)Tel');
     
     
     component.formGroup.patchValue({'phone': '55(11)96882-2810'});

@@ -17,7 +17,7 @@ export class CategoriesService {
     return new Observable<Category[]>(observer => {
        
          
-        this.http.get<Category[]>(`${environment.apiUrl}v1/categories`).subscribe(
+    this.http.get<Category[]>(`${environment.apiUrl}v1/categories`).subscribe(
 
           categories => {
            

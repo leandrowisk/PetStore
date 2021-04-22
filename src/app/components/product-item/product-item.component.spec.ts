@@ -11,7 +11,7 @@ import { MockComponents } from 'ng-mocks';
 
 
 
- describe('ProductItemComponent', () => {
+describe('ProductItemComponent', () => {
   let component: ProductItemComponent;
   let fixture: ComponentFixture<ProductItemComponent>;
 
