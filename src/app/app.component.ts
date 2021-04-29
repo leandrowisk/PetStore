@@ -18,8 +18,9 @@ export class AppComponent {
   menus=[
 
     {'name': 'Home' , 'router': '/'},
-    {'name': 'Contato', 'router': '/contact' },
-    {'name': 'Produtos', 'router': '/products' }
+    {'name': 'Produtos', 'router': '/products' },
+    {'name': 'Contato', 'router': '/contact' }
+   
 
 ]
 

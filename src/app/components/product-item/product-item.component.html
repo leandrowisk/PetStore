@@ -29,14 +29,17 @@
        
     </mat-icon>
    
-   
         <p class="preco-sem-desconto">{{product.value | currency:"BRL"}}</p>
-        <h1 class="preco-final"> {{product.promotional_value | currency: "BRL"}}</h1>
+        <h1 class="preco-final" *ngIf="product.promotional_value>0"> {{product.promotional_value | currency: "BRL"}}</h1>
+        <h1 class="preco-final" *ngIf="product.promotional_value==0">{{product.value | currency:"BRL"}}</h1>
+            
+            <p *ngIf="product.installment_available==true && product.promotional_value>0">{{product.installment_count}}x {{product.promotional_value/product.installment_count | currency: "BRL"}}</p>
+            <p *ngIf="product.installment_available==true && product.promotional_value==0">{{product.installment_count}}x {{product.value/product.installment_count | currency: "BRL"}}</p>
+            <p class="invisible" *ngIf="product.installment_count==0">{{product.installment_count}}x {{product.promotional_value/product.installment_count | currency: "BRL"}}</p>
+        
         
       </mat-card-content>
    
 </mat-card>
-
-  </a>
-
+ </a>
 </div>
